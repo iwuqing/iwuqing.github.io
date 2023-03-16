@@ -1,0 +1,171 @@
+---
+---
+
+@string{aps = {American Physical Society,}}
+
+article{wu2022self,
+  abbr={IEEE TCI},
+  title={Self-Supervised Coordinate Projection Network for Sparse-View Computed Tomography},
+  author={Wu, Qing and Feng, Ruimin and Wei, Hongjiang and Yu, Jingyi and Zhang, Yuyao},
+  journal={IEEE Transactions on Computational Imaging (Under Review)},
+  year={2023},
+  pdf={https://arxiv.org/abs/2209.05483},
+  selected={false},
+  image={/assets/pub_img/scope_cover.png},
+  abstract={In the present work, we propose a Self-supervised COordinate Projection nEtwork (SCOPE) to reconstruct the artifacts-free CT image from a single SV sinogram by solving the inverse tomography imaging problem. Compared with recent related works that solve similar problems using implicit neural representation network (INR), our essential contribution is an effective and simple re-projection strategy that pushes the tomography image reconstruction quality over supervised deep learning CT reconstruction works. The proposed strategy is inspired by the simple relationship between linear algebra and inverse problems. To solve the under-determined linear equation system, we first introduce INR to constrain the solution space via image continuity prior and achieve a rough solution. And secondly, we propose to generate a dense view sinogram that improves the rank of the linear equation system and produces a more stable CT image solution space. Our experiment results demonstrate that the re-projection strategy significantly improves the image reconstruction quality (+3 dB for PSNR at least). Besides, we integrate the recent hash encoding into our SCOPE model, which greatly accelerates the model training. Finally, we evaluate SCOPE in parallel and fan X-ray beam SVCT reconstruction tasks. Experimental results indicate that the proposed SCOPE model outperforms two latest INR-based methods and two well-popular supervised DL methods quantitatively and qualitatively.}
+}
+
+@InProceedings{https://doi.org/10.48550/arxiv.2210.12731,
+  doi = {10.48550/ARXIV.2210.12731},
+  url = {https://arxiv.org/abs/2210.12731},
+  author = {Wu, Qing and Li, Xin and Wei, Hongjiang and Yu, Jingyi and Zhang, Yuyao},
+  keywords = {Image and Video Processing (eess.IV), Computer Vision and Pattern Recognition (cs.CV), FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Joint Rigid Motion Correction and Sparse-View CT via Self-Calibrating Neural Field},
+  booktitle="IEEE International Symposium on Biomedical Imaging 2023",
+  abstract={Inspired by the recent Neural Radiance Field (NeRF) work, Implicit Neural Representation (INR) has widely received attention in Sparse-View Computed Tomography (SVCT) reconstruction tasks as a self-supervised deep learning framework. INR-based SVCT methods represent the desired CT image as a continuous function of spatial coordinates and train a Multi-Layer Perceptron (MLP) to learn the function by minimizing loss on the SV sinogram. Benefiting from the continuous image function provided by INR, high-quality CT image can be reconstructed. However, existing INR-based SVCT methods suppose by default that there is no relative motion during CT image acquisition. Therefore, such methods suffer from severe performance drops for real SVCT imaging with even minor subject motion. In this work, we propose a self-calibrating neural field to recover the artifacts-free image from rigid motion-corrupted SV sinogram without using any external training data. Specifically, we introduce a transform matrix for each projection pose in the sinogram respectively, to present the the inaccurate projection poses caused by subject rigid motion. Then we optimize these transformation matrices and the CT image jointly for achieving rigid motion corrected CT image reconstruction. We conduct numerical experiments on a public CT image dataset. The results indicate our model significantly outperforms two representative INR-based methods for SVCT reconstruction tasks with four different levels of rigid motion.},
+  year="2023",
+  publisher="IEEE",
+  year = {2023},
+  selected={true},
+  abbr={IEEE ISBI 2023},
+  pdf={https://arxiv.org/abs/2210.12731},
+  image={/assets/pub_img/isbi_cover.png},
+}
+
+@ARTICLE{9954892,
+  author={Wu, Qing and Li, Yuwei and Sun, Yawen and Zhou, Yan and Wei, Hongjiang and Yu, Jingyi and Zhang, Yuyao},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={An Arbitrary Scale Super-Resolution Approach for 3D MR Images via Implicit Neural Representation}, 
+  year={2023},
+  volume={27},
+  number={2},
+  abstract={High Resolution (HR) medical images provide rich anatomical structure details to facilitate early and accurate diagnosis. In magnetic resonance imaging (MRI), restricted by hardware capacity, scan time, and patient cooperation ability, isotropic 3-dimensional (3D) HR image acquisition typically requests long scan time and, results in small spatial coverage and low signal-to-noise ratio (SNR). Recent studies showed that, with deep convolutional neural networks, isotropic HR MR images could be recovered from low-resolution (LR) input via single image super-resolution (SISR) algorithms. However, most existing SISR methods tend to approach scale-specific projection between LR and HR images, thus these methods can only deal with fixed up-sampling rates. In this paper, we propose ArSSR, an Arbitrary Scale Super-Resolution approach for recovering 3D HR MR images. In the ArSSR model, the LR image and the HR image are represented using the same implicit neural voxel function with different sampling rates. Due to the continuity of the learned implicit function, a single ArSSR model is able to achieve arbitrary and infinite up-sampling rate reconstructions of HR images from any input LR image. Then the SR task is converted to approach the implicit voxel function via deep neural networks from a set of paired HR and LR training examples. The ArSSR model consists of an encoder network and a decoder network. Specifically, the convolutional encoder network is to extract feature maps from the LR input images and the fully-connected decoder network is to approximate the implicit voxel function. Experimental results on three datasets show that the ArSSR model can achieve state-of-the-art SR performance for 3D HR MR image reconstruction while using a single trained model to achieve arbitrary up-sampling scales.},
+  pages={1004-1015},
+  doi={10.1109/JBHI.2022.3223106},
+  selected={true},
+  abbr={IEEE J-BHI 2023},
+  pdf={https://ieeexplore.ieee.org/abstract/document/9954892},
+  code={https://github.com/iwuqing/ArSSR},
+  image={/assets/pub_img/arssr_cover.jpg},
+  }
+
+
+@ARTICLE{10004486,
+  author={Rao*, Chaolin and Wu*, Qing and Zhou, Pingqiang and Yu, Jingyi and Zhang, Yuyao and Lou, Xin},
+  journal={IEEE Transactions on Circuits and Systems I: Regular Papers}, 
+  title={An Energy-Efficient Accelerator for Medical Image Reconstruction From Implicit Neural Representation}, 
+  year={2023},
+  pages={1-14},
+  abstract={This work presents an energy-efficient accelerator for medical image reconstruction from implicit neural representation (INR). The accelerator implements an INR-based algorithm to deliver high-quality medical image reconstruction with arbitrary resolution from a compact implicit format. In particular, we propose a dedicated hardware architecture based on an optimized computation flow for the INR-based reconstruction algorithm, which co-designs data reuse and computation load. The proposed architecture takes in the coordinate of the intersection of three scans and outputs all the voxel intensities, minimizing the data movement between on-chip and off-chip. To validate the proposed accelerator, we build a proof-of-concept prototype demonstration system using field programmable gate array (FPGA). We also map our design to 40nm CMOS technology to measure the performance of the proposed accelerator. The implementation results show that, running at 400MHz, the proposed accelerator is capable of processing medical images with  $256\times 256$  resolution in real-time at 26.3 frames per second (FPS), with a power consumption of only 795 mW. Comparison results show that the performance, as well as the energy efficiency of the proposed accelerator, outperforms the central processing unit (CPU)-based and graphic processing unit (GPU)-based implementations.},
+  doi={10.1109/TCSI.2022.3231863},
+  ISSN={1558-0806},
+  selected={true},
+  abbr={IEEE TCAS-I 2023},
+  pdf={https://ieeexplore.ieee.org/abstract/document/10004486},
+  image={/assets/pub_img/tcas_cover.png},
+}
+
+
+
+@InProceedings{10.1007/978-3-030-87231-1_7,
+abbr={MICCAI 2021},
+author="Wu, Qing
+and Li, Yuwei
+and Xu, Lan
+and Feng, Ruiming
+and Wei, Hongjiang
+and Yang, Qing
+and Yu, Boliang
+and Liu, Xiaozhao
+and Yu, Jingyi
+and Zhang, Yuyao",
+editor="de Bruijne, Marleen
+and Cattin, Philippe C.
+and Cotin, St{\'e}phane
+and Padoy, Nicolas
+and Speidel, Stefanie
+and Zheng, Yefeng
+and Essert, Caroline",
+title="IREM: High-Resolution Magnetic Resonance Image Reconstruction via Implicit Neural Representation",
+booktitle="Medical Image Computing and Computer Assisted Intervention 2021",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="65--74",
+abstract="For collecting high-quality high-resolution (HR) MR image, we propose a novel image reconstruction network named IREM, which is trained on multiple low-resolution (LR) MR images and achieve an arbitrary up-sampling rate for HR image reconstruction. In this work, we suppose the desired HR image as an implicit continuous function of the 3D image spatial coordinate, and the thick-slice LR images as several sparse discrete samplings of this function. Then the super-resolution (SR) task is to learn the continuous volumetric function from a limited observation using a fully-connected neural network combined with Fourier feature positional encoding. By simply minimizing the error between the network prediction and the acquired LR image intensity across each imaging plane, IREM is trained to represent a continuous model of the observed tissue anatomy. Experimental results indicate that IREM succeeds in representing high-frequency image features, and in real scene data collection, IREM reduces scan time and achieves high-quality high-resolution MR imaging in terms of SNR and local image detail.",
+isbn="978-3-030-87231-1",
+image={/assets/pub_img/irem_cover.png},
+pdf={https://link.springer.com/chapter/10.1007/978-3-030-87231-1_7},
+selected={true}
+}
+
+
+@InProceedings{10.1007/978-3-031-16446-0_32,
+abbr={MICCAI 2022},
+author="Tian, Xuanyu
+and Wu, Qing
+and Wei, Hongjiang
+and Zhang, Yuyao",
+editor="Wang, Linwei
+and Dou, Qi
+and Fletcher, P. Thomas
+and Speidel, Stefanie
+and Li, Shuo",
+title="Noise2SR: Learning to Denoise from Super-Resolved Single Noisy Fluorescence Image",
+booktitle="Medical Image Computing and Computer Assisted Intervention 2021",
+year="2022",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="334--343",
+abstract="Fluorescence microscopy is a key driver to promote discoveries of biomedical research. However, with the limitation of microscope hardware and characteristics of the observed samples, the fluorescence microscopy images are susceptible to noise. Recently, a few self-supervised deep learning (DL) denoising methods have been proposed. However, the training efficiency and denoising performance of existing methods are relatively low in real scene noise removal. To address this issue, this paper proposed self-supervised image denoising method Noise2SR (N2SR) to train a simple and effective image denoising model based on single noisy observation. Our Noise2SR denoising model is designed for training with paired noisy images of different dimensions. Benefiting from this training strategy, Noise2SR is more efficiently self-supervised and able to restore more image details from a single noisy observation. Experimental results of simulated noise and real microscopy noise removal show that Noise2SR outperforms two blind-spot based self-supervised deep learning image denoising methods. We envision that Noise2SR has the potential to improve more other kind of scientific imaging quality.",
+isbn="978-3-031-16446-0",
+image={/assets/pub_img/n2sr_cover.png},
+pdf={https://link.springer.com/chapter/10.1007/978-3-031-16446-0_32},
+selected={false}
+}
+
+
+
+@inproceedings{chen2022continuous,
+  abbr={MCCAI PIPPI 2022},
+  title={Continuous longitudinal fetus brain atlas construction via implicit neural representation},
+  author={Chen, Lixuan and Wu, Jiangjie and Wu, Qing and Wei, Hongjiang and Zhang, Yuyao},
+  abstract={Longitudinal fetal brain atlas is a powerful tool for understanding and characterizing the complex process of fetus brain development. Existing fetus brain atlases are typically constructed by averaged brain images on discrete time points independently over time. Due to the differences in onto-genetic trends among samples at different time points, the resulting atlases suffer from temporal inconsistency, which may lead to estimating error of the brain developmental characteristic parameters along the timeline. To this end, we proposed a multi-stage deep-learning framework to tackle the time inconsistency issue as a 4D (3D brain volume + 1D age) image data denoising task. Using implicit neural representation, we construct a continuous and noise-free longitudinal fetus brain atlas as a function of the 4D spatial-temporal coordinate. Experimental results on two public fetal brain atlases (CRL and FBA-Chinese atlases) show that the proposed method can significantly improve the atlas temporal consistency while maintaining good fetus brain structure representation. In addition, the continuous longitudinal fetus brain atlases can also be extensively applied to generate finer 4D atlases in both spatial and temporal resolution.},
+  booktitle={MICCAI workshop PIPPI 2022},
+  pages={38--47},
+  year={2022},
+  organization={Springer},
+  pdf={https://link.springer.com/chapter/10.1007/978-3-031-17117-8_4},
+  selected={false},
+  image={/assets/pub_img/MICCAI_workshop_PIPPI.jpeg},
+  award={Best Paper Honorable Mention}
+}
+
+
+article{NeuroImage,
+  abbr={NeuroImage},
+  author="Chen, Lixuan and Wu, Jiangjie and Wu, Qing and Lao, Guoyan and Wei, Hongjiang and Zhang, Yuyao",
+  title="COLLATOR: Consistent Spatial-Temporal Longitudinal Atlas Construction via Implicit Neural Representation.",
+  journal = {NeuroImage (Under Review)},
+  year="2023",
+  abstract="Longitudinal brain atlases are essential tools for studying brain development. However, existing atlases often suffer from temporal inconsistency, due to the typical atlas construction method that averages brain images on discrete time points independently. Additionally, the differences in onto-genetic trends among samples at different time points further compound this issue. These inconsistencies may significantly impact the accuracy of brain developmental characteristic analysis. In this paper, we propose a multi-stage deep-learning framework to address this issue by treating it as a 4D image denoising task, where the 4D data consists of 3D brain volumes and 1D age. Our framework employs implicit neural representation to construct a continuous and noise-free longitudinal brain atlas as a function of the 4D spatial-temporal coordinate. We evaluate our approach on two modalities of brain atlases (QSM and fetus atlases) and show that our method significantly improves temporal consistency while maintaining accurate representation of brain structures. Furthermore, the continuous functions generated by our method can be used to generate 4D atlases with higher spatial and temporal resolution.",
+  selected={false},
+  image={/assets/pub_img/NueroImage.gif}
+}
+
+@article{wu2021age,
+  abbr={NeuroImage 2021},
+  title={Age-specific structural fetal brain atlases construction and cortical development quantification for Chinese population},
+  author={Wu, Jiangjie and Sun, Taotao and Yu, Boliang and Li, Zhenghao and Wu, Qing and Wang, Yutong and Qian, Zhaoxia and Zhang, Yuyao and Jiang, Ling and Wei, Hongjiang},
+  journal={Neuroimage},
+  volume={241},
+  pages={118412},
+  year={2021},
+  publisher={Elsevier},
+  pdf={https://www.sciencedirect.com/science/article/pii/S105381192100687X},
+  selected={false},
+  image={/assets/pub_img/fba_cover.jpg},
+  abstract = {In magnetic resonance imaging (MRI) studies of fetal brain development, structural brain atlases usually serve as essential references for the fetal population. Individual images are usually normalized into a common or standard space for analysis. However, the existing fetal brain atlases are mostly based on MR images obtained from Caucasian populations and thus are not ideal for the characterization of the fetal Chinese population due to neuroanatomical differences related to genetic factors. In this paper, we use an unbiased template construction algorithm to create a set of age-specific Chinese fetal atlases between 21-35 weeks of gestation from 115 normal fetal brains. Based on the 4D spatiotemporal atlas, the morphological development patterns, e.g., cortical thickness, cortical surface area, sulcal and gyral patterns, were quantified. The fetal brain abnormalities were detected when referencing the age-specific template. Additionally, a direct comparison of the Chinese fetal atlases and Caucasian fetal atlases reveals dramatic anatomical differences, mainly in the medial frontal and temporal regions. After applying the Chinese and Caucasian fetal atlases separately to an independent Chinese fetal brain dataset, we find that the Chinese fetal atlases result in significantly higher accuracy than the Caucasian fetal atlases in guiding brain tissue segmentation. These results suggest that the Chinese fetal brain atlases are necessary for quantitative analysis of the typical and atypical development of the Chinese fetal population in the future. The atlases with their parcellations are now publicly available at https://github.com/DeepBMI/FBA-Chinese.}
+}
+
+

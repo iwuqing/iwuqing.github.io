@@ -1,0 +1,92 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Qing Wu
+    - name: Date of Birth
+      value: Sep. 1997
+    # - name: Languages
+      # value: English, Mandarin
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. Student
+      institution: ShanghaiTech University, Shanghai, China
+      year: 2020 - 
+      description:
+        - Electronic Science and Technology
+        - Advised by Prof. Yuyao Zhang
+        # - title: Special Honors
+          # contents:
+            # - Merit Student of ShanghaiTech University, 2020-2021
+    - title:  Bachelor
+      institution: China University of Geosciences, Wuhan, China
+      year: 2016 - 2020
+      description:
+        - Communication Engineering
+
+# - title: Experience
+#   type: time_table
+#   contents:
+#     # - title: Professor of Theoretical Physics
+#     #   institution: Institute for Advanced Study, Princeton University
+#     #   year: 1933 - 1955
+#     #   description:
+#     #     - Description 1.
+#     #     - Description 2.
+#     #     - title: Description 3.
+#     #       contents:
+#     #         - Sub-description 1.
+#     #         - Sub-description 2.
+#     - title: Research Intern
+#       institution: System Group, Microsoft Research Asia
+#       year: 2021-2022
+#       description:
+#         - Worked on caching project
+
+#     - title: Undergraduate Researcher
+#       institution: Advanced Data Systems Laboratory (ADSL), USTC, Hefei, China
+#       year: 2021-2022
+
+
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#       year: 2015-now
+#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2021
+      items: 
+        - Merit Student of ShanghaiTech University
+    # - year: 2020
+    #   items: 
+    #     - SGY Sihua Scholarship (4/50)
+    #     - Hua Xia Talent Program First Prize Scholarship
+    #     - Zhong Hai Memorial Scholarship (2/200)
+    # - year: 2019
+    #   items: 
+    #     - SGY Class of 87 Innovation Scholarship (10/1,000) 
+    #     - Chen Guoliang Scholarship (Top 10%) 
+
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#     - title: Topic 1.
+#       items: 
+#         - Description 1.
+#         - Description 2.
+#     - title: Topic 2.
+#       items:
+#         - Description 1.
+#         - Description 2.
+- title: Other Interests
+  type: time_table
+  contents:
+    - year:
+      items: 
+        - League of Legends (英雄联盟)
