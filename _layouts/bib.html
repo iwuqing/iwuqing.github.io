@@ -1,7 +1,7 @@
 ---
 ---
 <div class="row">
-  <div class="col-sm-3 {% if entry.preview %}preview{% else %}abbr{% endif %}" style="text-align:left">
+  <div class="col-sm-3 {% if entry.preview %}preview{% else %}abbr{% endif %}" style="text-align:center">
     {%- if entry.preview  -%}
         {% include figure.html path=entry.image class="img-fluid rounded z-depth-1" zoomable=true %}
     {%- elsif entry.abbr -%}
@@ -28,7 +28,12 @@
       {%- endif -%}
     {%- endif -%}
 
-
+    <p></p>
+    <div class="teaser">
+      {%- if entry.image -%}
+        {% include figure.html path=entry.image class="img-fluid rounded z-depth-1" zoomable=true %}
+      {%- endif -%}
+    </div>
   </div>
   <!-- Entry bib key -->
   <div id="{{entry.key}}" class="col-sm-8">
