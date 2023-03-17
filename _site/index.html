@@ -194,22 +194,37 @@
             <ol class="bibliography">
 <li>
 <div class="row">
-  <div class="col-sm-3 abbr" style="text-align:center">
-<abbr class="badge">IEEE ISBI 2023</abbr><p></p>
-    <div class="teaser">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/pub_img/isbi_cover.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
+  <div class="col-sm-3 " style="text-align:center">
+<abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
+      <div style="color:var(--global-bg-color);">IEEE ISBI 2023</div></abbr><br><p></p>
+<img id="isbi_coverpng" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/isbi_cover.png"><div id="isbi_coverpng-modal" class="modal2">
+      <span class="closeimg" onclick="document.getElementById('isbi_coverpng-modal').style.display='none'">×</span>
+      <div class="myCaption"></div>
+      <img class="modal-content2" id="isbi_coverpng-modal-img">
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("isbi_coverpng-modal");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('isbi_coverpng');
+      var modalImg = document.getElementById("isbi_coverpng-modal-img");
+      var captionText = modal.getElementsByTagName('div')[0];
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = "";
+      }
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByTagName('span')[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
 </div>
-  </div>
   <!-- Entry bib key -->
   <div id="https://doi.org/10.48550/arxiv.2210.12731" class="col-sm-8">
   
@@ -244,22 +259,37 @@
 </li>
 <li>
 <div class="row">
-  <div class="col-sm-3 abbr" style="text-align:center">
-<abbr class="badge">IEEE J-BHI 2023</abbr><p></p>
-    <div class="teaser">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/pub_img/arssr_cover.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
+  <div class="col-sm-3 " style="text-align:center">
+<abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
+      <div style="color:var(--global-bg-color);">IEEE J-BHI 2023</div></abbr><br><p></p>
+<img id="arssr_coverjpg" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/arssr_cover.jpg"><div id="arssr_coverjpg-modal" class="modal2">
+      <span class="closeimg" onclick="document.getElementById('arssr_coverjpg-modal').style.display='none'">×</span>
+      <div class="myCaption"></div>
+      <img class="modal-content2" id="arssr_coverjpg-modal-img">
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("arssr_coverjpg-modal");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('arssr_coverjpg');
+      var modalImg = document.getElementById("arssr_coverjpg-modal-img");
+      var captionText = modal.getElementsByTagName('div')[0];
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = "";
+      }
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByTagName('span')[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
 </div>
-  </div>
   <!-- Entry bib key -->
   <div id="9954892" class="col-sm-8">
   
@@ -295,22 +325,37 @@
 </li>
 <li>
 <div class="row">
-  <div class="col-sm-3 abbr" style="text-align:center">
-<abbr class="badge">IEEE TCAS-I 2023</abbr><p></p>
-    <div class="teaser">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/pub_img/tcas_cover.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
+  <div class="col-sm-3 " style="text-align:center">
+<abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
+      <div style="color:var(--global-bg-color);">IEEE TCAS-I 2023</div></abbr><br><p></p>
+<img id="tcas_coverpng" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/tcas_cover.png"><div id="tcas_coverpng-modal" class="modal2">
+      <span class="closeimg" onclick="document.getElementById('tcas_coverpng-modal').style.display='none'">×</span>
+      <div class="myCaption"></div>
+      <img class="modal-content2" id="tcas_coverpng-modal-img">
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("tcas_coverpng-modal");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('tcas_coverpng');
+      var modalImg = document.getElementById("tcas_coverpng-modal-img");
+      var captionText = modal.getElementsByTagName('div')[0];
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = "";
+      }
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByTagName('span')[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
 </div>
-  </div>
   <!-- Entry bib key -->
   <div id="10004486" class="col-sm-8">
   
@@ -345,22 +390,37 @@
 </li>
 <li>
 <div class="row">
-  <div class="col-sm-3 abbr" style="text-align:center">
-<abbr class="badge">MICCAI 2021</abbr><p></p>
-    <div class="teaser">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/pub_img/irem_cover.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
+  <div class="col-sm-3 " style="text-align:center">
+<abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
+      <div style="color:var(--global-bg-color);">MICCAI 2021</div></abbr><br><p></p>
+<img id="irem_coverpng" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/irem_cover.png"><div id="irem_coverpng-modal" class="modal2">
+      <span class="closeimg" onclick="document.getElementById('irem_coverpng-modal').style.display='none'">×</span>
+      <div class="myCaption"></div>
+      <img class="modal-content2" id="irem_coverpng-modal-img">
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("irem_coverpng-modal");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('irem_coverpng');
+      var modalImg = document.getElementById("irem_coverpng-modal-img");
+      var captionText = modal.getElementsByTagName('div')[0];
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = "";
+      }
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByTagName('span')[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
 </div>
-  </div>
   <!-- Entry bib key -->
   <div id="10.1007/978-3-030-87231-1_7" class="col-sm-8">
   
@@ -439,7 +499,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023 Qing  Wu. Last updated: March 17, 2023.
+        © Copyright 2023 Qing  Wu. Last updated: March 18, 2023.
       </div>
     </footer>
 
