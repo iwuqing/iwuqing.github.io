@@ -111,6 +111,72 @@
 <div class="row">
   <div class="col-sm-3 " style="text-align:center">
 <abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
+      <div style="color:var(--global-bg-color);">Prprint</div></abbr><br><p></p>
+<img id="scope_coverpng" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/scope_cover.png"><div id="scope_coverpng-modal" class="modal2">
+      <span class="closeimg" onclick="document.getElementById('scope_coverpng-modal').style.display='none'">×</span>
+      <div class="myCaption"></div>
+      <img class="modal-content2" id="scope_coverpng-modal-img">
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("scope_coverpng-modal");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('scope_coverpng');
+      var modalImg = document.getElementById("scope_coverpng-modal-img");
+      var captionText = modal.getElementsByTagName('div')[0];
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = "";
+      }
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByTagName('span')[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+</div>
+  <!-- Entry bib key -->
+  <div id="wu2022self" class="col-sm-8">
+  
+    <!-- Title -->
+    <div class="title">Self-Supervised Coordinate Projection Network for Sparse-View Computed Tomography</div>
+    <!-- Author -->
+    <div class="author">
+    
+
+    <em>Qing Wu</em>, Ruimin Feng, Hongjiang Wei, Jingyi Yu, and Yuyao Zhang</div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    <div class="periodical">
+      <i>IEEE Transactions on Computational Imaging (Under Review)</i>
+    </div>
+  
+    <!-- Links/Buttons -->
+    <div class="links">
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      <a href="https://arxiv.org/abs/2209.05483" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
+      <a href="https://github.com/iwuqing/SCOPE" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+
+    <!-- Hidden abstract block -->
+    <div class="abstract hidden">
+      <p>In the present work, we propose a Self-supervised COordinate Projection nEtwork (SCOPE) to reconstruct the artifacts-free CT image from a single SV sinogram by solving the inverse tomography imaging problem. Compared with recent related works that solve similar problems using implicit neural representation network (INR), our essential contribution is an effective and simple re-projection strategy that pushes the tomography image reconstruction quality over supervised deep learning CT reconstruction works. The proposed strategy is inspired by the simple relationship between linear algebra and inverse problems. To solve the under-determined linear equation system, we first introduce INR to constrain the solution space via image continuity prior and achieve a rough solution. And secondly, we propose to generate a dense view sinogram that improves the rank of the linear equation system and produces a more stable CT image solution space. Our experiment results demonstrate that the re-projection strategy significantly improves the image reconstruction quality (+3 dB for PSNR at least). Besides, we integrate the recent hash encoding into our SCOPE model, which greatly accelerates the model training. Finally, we evaluate SCOPE in parallel and fan X-ray beam SVCT reconstruction tasks. Experimental results indicate that the proposed SCOPE model outperforms two latest INR-based methods and two well-popular supervised DL methods quantitatively and qualitatively.</p>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<div class="row">
+  <div class="col-sm-3 " style="text-align:center">
+<abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
       <div style="color:var(--global-bg-color);">IEEE ISBI 2023</div></abbr><br><p></p>
 <img id="isbi_coverpng" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/isbi_cover.png"><div id="isbi_coverpng-modal" class="modal2">
       <span class="closeimg" onclick="document.getElementById('isbi_coverpng-modal').style.display='none'">×</span>
@@ -585,7 +651,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023 Qing  Wu. Last updated: March 18, 2023.
+        © Copyright 2023 Qing  Wu. Last updated: April 17, 2023.
       </div>
     </footer>
 

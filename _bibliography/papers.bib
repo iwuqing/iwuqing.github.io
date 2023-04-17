@@ -3,15 +3,16 @@
 
 @string{aps = {American Physical Society,}}
 
-article{wu2022self,
-  abbr={IEEE TCI},
+@article{wu2022self,
+  abbr={Prprint},
   title={Self-Supervised Coordinate Projection Network for Sparse-View Computed Tomography},
   author={Wu, Qing and Feng, Ruimin and Wei, Hongjiang and Yu, Jingyi and Zhang, Yuyao},
   journal={IEEE Transactions on Computational Imaging (Under Review)},
   year={2023},
   pdf={https://arxiv.org/abs/2209.05483},
+  code={https://github.com/iwuqing/SCOPE},
   selected={false},
-  image={/assets/pub_img/scope_cover.png},
+  preview={scope_cover.png},
   abstract={In the present work, we propose a Self-supervised COordinate Projection nEtwork (SCOPE) to reconstruct the artifacts-free CT image from a single SV sinogram by solving the inverse tomography imaging problem. Compared with recent related works that solve similar problems using implicit neural representation network (INR), our essential contribution is an effective and simple re-projection strategy that pushes the tomography image reconstruction quality over supervised deep learning CT reconstruction works. The proposed strategy is inspired by the simple relationship between linear algebra and inverse problems. To solve the under-determined linear equation system, we first introduce INR to constrain the solution space via image continuity prior and achieve a rough solution. And secondly, we propose to generate a dense view sinogram that improves the rank of the linear equation system and produces a more stable CT image solution space. Our experiment results demonstrate that the re-projection strategy significantly improves the image reconstruction quality (+3 dB for PSNR at least). Besides, we integrate the recent hash encoding into our SCOPE model, which greatly accelerates the model training. Finally, we evaluate SCOPE in parallel and fan X-ray beam SVCT reconstruction tasks. Experimental results indicate that the proposed SCOPE model outperforms two latest INR-based methods and two well-popular supervised DL methods quantitatively and qualitatively.}
 }
 
