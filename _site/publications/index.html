@@ -111,7 +111,69 @@
 <div class="row">
   <div class="col-sm-3 " style="text-align:center">
 <abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
-      <div style="color:var(--global-bg-color);">Prprint</div></abbr><br><p></p>
+      <div style="color:var(--global-bg-color);">HBM 2023</div></abbr><br><p></p>
+<img id="hbm_2023png" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/hbm_2023.png"><div id="hbm_2023png-modal" class="modal2">
+      <span class="closeimg" onclick="document.getElementById('hbm_2023png-modal').style.display='none'">×</span>
+      <div class="myCaption"></div>
+      <img class="modal-content2" id="hbm_2023png-modal-img">
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("hbm_2023png-modal");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('hbm_2023png');
+      var modalImg = document.getElementById("hbm_2023png-modal-img");
+      var captionText = modal.getElementsByTagName('div')[0];
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = "";
+      }
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByTagName('span')[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+</div>
+  <!-- Entry bib key -->
+  <div id="li2023direct" class="col-sm-8">
+  
+    <!-- Title -->
+    <div class="title">Direct localization and delineation of human pedunculopontine nucleus based on a self-supervised magnetic resonance image super-resolution method</div>
+    <!-- Author -->
+    <div class="author">
+    
+
+    Jun Li, Xiaojun Guan, <em>Qing Wu</em>, Chenyu He, Weimin Zhang, Xiyue Lin, Chunlei Liu, Hongjiang Wei, Xiaojun Xu, and Yuyao Zhang</div>
+
+    <!-- Journal/Book title and date -->
+    
+    
+    
+    <div class="periodical">
+      <i>Human Brain Mapping</i>
+    </div>
+  
+    <!-- Links/Buttons -->
+    <div class="links">
+      <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.26311" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
+      <a href="https://github.com/SMILE-Lab-ShanghaiTech/Human-Pedunculopontine-Nucleus-Atlas" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+
+    
+  </div>
+</div>
+</li>
+<li>
+<div class="row">
+  <div class="col-sm-3 " style="text-align:center">
+<abbr class="badge" style="background: var(--global-theme-color);border-style: solid;border-width: 2px;border-color:var(--global-theme-color)">
+      <div style="color:var(--global-bg-color);">IEEE TCI 2023</div></abbr><br><p></p>
 <img id="scope_coverpng" class="preview z-depth-1 rounded myImg" src="/assets/pub_img/scope_cover.png"><div id="scope_coverpng-modal" class="modal2">
       <span class="closeimg" onclick="document.getElementById('scope_coverpng-modal').style.display='none'">×</span>
       <div class="myCaption"></div>
@@ -156,20 +218,16 @@
     
     
     <div class="periodical">
-      <i>IEEE Transactions on Computational Imaging (Under Review)</i>
+      <i>IEEE Transactions on Computational Imaging</i>
     </div>
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://arxiv.org/abs/2209.05483" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
       <a href="https://github.com/iwuqing/SCOPE" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Code</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>In the present work, we propose a Self-supervised COordinate Projection nEtwork (SCOPE) to reconstruct the artifacts-free CT image from a single SV sinogram by solving the inverse tomography imaging problem. Compared with recent related works that solve similar problems using implicit neural representation network (INR), our essential contribution is an effective and simple re-projection strategy that pushes the tomography image reconstruction quality over supervised deep learning CT reconstruction works. The proposed strategy is inspired by the simple relationship between linear algebra and inverse problems. To solve the under-determined linear equation system, we first introduce INR to constrain the solution space via image continuity prior and achieve a rough solution. And secondly, we propose to generate a dense view sinogram that improves the rank of the linear equation system and produces a more stable CT image solution space. Our experiment results demonstrate that the re-projection strategy significantly improves the image reconstruction quality (+3 dB for PSNR at least). Besides, we integrate the recent hash encoding into our SCOPE model, which greatly accelerates the model training. Finally, we evaluate SCOPE in parallel and fan X-ray beam SVCT reconstruction tasks. Experimental results indicate that the proposed SCOPE model outperforms two latest INR-based methods and two well-popular supervised DL methods quantitatively and qualitatively.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -227,14 +285,10 @@
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://arxiv.org/abs/2210.12731" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>Inspired by the recent Neural Radiance Field (NeRF) work, Implicit Neural Representation (INR) has widely received attention in Sparse-View Computed Tomography (SVCT) reconstruction tasks as a self-supervised deep learning framework. INR-based SVCT methods represent the desired CT image as a continuous function of spatial coordinates and train a Multi-Layer Perceptron (MLP) to learn the function by minimizing loss on the SV sinogram. Benefiting from the continuous image function provided by INR, high-quality CT image can be reconstructed. However, existing INR-based SVCT methods suppose by default that there is no relative motion during CT image acquisition. Therefore, such methods suffer from severe performance drops for real SVCT imaging with even minor subject motion. In this work, we propose a self-calibrating neural field to recover the artifacts-free image from rigid motion-corrupted SV sinogram without using any external training data. Specifically, we introduce a transform matrix for each projection pose in the sinogram respectively, to present the the inaccurate projection poses caused by subject rigid motion. Then we optimize these transformation matrices and the CT image jointly for achieving rigid motion corrected CT image reconstruction. We conduct numerical experiments on a public CT image dataset. The results indicate our model significantly outperforms two representative INR-based methods for SVCT reconstruction tasks with four different levels of rigid motion.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -292,15 +346,11 @@
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://ieeexplore.ieee.org/abstract/document/9954892" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
       <a href="https://github.com/iwuqing/ArSSR" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Code</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>High Resolution (HR) medical images provide rich anatomical structure details to facilitate early and accurate diagnosis. In magnetic resonance imaging (MRI), restricted by hardware capacity, scan time, and patient cooperation ability, isotropic 3-dimensional (3D) HR image acquisition typically requests long scan time and, results in small spatial coverage and low signal-to-noise ratio (SNR). Recent studies showed that, with deep convolutional neural networks, isotropic HR MR images could be recovered from low-resolution (LR) input via single image super-resolution (SISR) algorithms. However, most existing SISR methods tend to approach scale-specific projection between LR and HR images, thus these methods can only deal with fixed up-sampling rates. In this paper, we propose ArSSR, an Arbitrary Scale Super-Resolution approach for recovering 3D HR MR images. In the ArSSR model, the LR image and the HR image are represented using the same implicit neural voxel function with different sampling rates. Due to the continuity of the learned implicit function, a single ArSSR model is able to achieve arbitrary and infinite up-sampling rate reconstructions of HR images from any input LR image. Then the SR task is converted to approach the implicit voxel function via deep neural networks from a set of paired HR and LR training examples. The ArSSR model consists of an encoder network and a decoder network. Specifically, the convolutional encoder network is to extract feature maps from the LR input images and the fully-connected decoder network is to approximate the implicit voxel function. Experimental results on three datasets show that the ArSSR model can achieve state-of-the-art SR performance for 3D HR MR image reconstruction while using a single trained model to achieve arbitrary up-sampling scales.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -358,14 +408,10 @@
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://ieeexplore.ieee.org/abstract/document/10004486" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>This work presents an energy-efficient accelerator for medical image reconstruction from implicit neural representation (INR). The accelerator implements an INR-based algorithm to deliver high-quality medical image reconstruction with arbitrary resolution from a compact implicit format. In particular, we propose a dedicated hardware architecture based on an optimized computation flow for the INR-based reconstruction algorithm, which co-designs data reuse and computation load. The proposed architecture takes in the coordinate of the intersection of three scans and outputs all the voxel intensities, minimizing the data movement between on-chip and off-chip. To validate the proposed accelerator, we build a proof-of-concept prototype demonstration system using field programmable gate array (FPGA). We also map our design to 40nm CMOS technology to measure the performance of the proposed accelerator. The implementation results show that, running at 400MHz, the proposed accelerator is capable of processing medical images with  256\times 256  resolution in real-time at 26.3 frames per second (FPS), with a power consumption of only 795 mW. Comparison results show that the performance, as well as the energy efficiency of the proposed accelerator, outperforms the central processing unit (CPU)-based and graphic processing unit (GPU)-based implementations.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -427,14 +473,10 @@
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://link.springer.com/chapter/10.1007/978-3-031-16446-0_32" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>Fluorescence microscopy is a key driver to promote discoveries of biomedical research. However, with the limitation of microscope hardware and characteristics of the observed samples, the fluorescence microscopy images are susceptible to noise. Recently, a few self-supervised deep learning (DL) denoising methods have been proposed. However, the training efficiency and denoising performance of existing methods are relatively low in real scene noise removal. To address this issue, this paper proposed self-supervised image denoising method Noise2SR (N2SR) to train a simple and effective image denoising model based on single noisy observation. Our Noise2SR denoising model is designed for training with paired noisy images of different dimensions. Benefiting from this training strategy, Noise2SR is more efficiently self-supervised and able to restore more image details from a single noisy observation. Experimental results of simulated noise and real microscopy noise removal show that Noise2SR outperforms two blind-spot based self-supervised deep learning image denoising methods. We envision that Noise2SR has the potential to improve more other kind of scientific imaging quality.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -492,14 +534,10 @@
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://link.springer.com/chapter/10.1007/978-3-031-17117-8_4" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>Longitudinal fetal brain atlas is a powerful tool for understanding and characterizing the complex process of fetus brain development. Existing fetus brain atlases are typically constructed by averaged brain images on discrete time points independently over time. Due to the differences in onto-genetic trends among samples at different time points, the resulting atlases suffer from temporal inconsistency, which may lead to estimating error of the brain developmental characteristic parameters along the timeline. To this end, we proposed a multi-stage deep-learning framework to tackle the time inconsistency issue as a 4D (3D brain volume + 1D age) image data denoising task. Using implicit neural representation, we construct a continuous and noise-free longitudinal fetus brain atlas as a function of the 4D spatial-temporal coordinate. Experimental results on two public fetal brain atlases (CRL and FBA-Chinese atlases) show that the proposed method can significantly improve the atlas temporal consistency while maintaining good fetus brain structure representation. In addition, the continuous longitudinal fetus brain atlases can also be extensively applied to generate finer 4D atlases in both spatial and temporal resolution.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -561,14 +599,10 @@
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://link.springer.com/chapter/10.1007/978-3-030-87231-1_7" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>For collecting high-quality high-resolution (HR) MR image, we propose a novel image reconstruction network named IREM, which is trained on multiple low-resolution (LR) MR images and achieve an arbitrary up-sampling rate for HR image reconstruction. In this work, we suppose the desired HR image as an implicit continuous function of the 3D image spatial coordinate, and the thick-slice LR images as several sparse discrete samplings of this function. Then the super-resolution (SR) task is to learn the continuous volumetric function from a limited observation using a fully-connected neural network combined with Fourier feature positional encoding. By simply minimizing the error between the network prediction and the acquired LR image intensity across each imaging plane, IREM is trained to represent a continuous model of the observed tissue anatomy. Experimental results indicate that IREM succeeds in representing high-frequency image features, and in real scene data collection, IREM reduces scan time and achieves high-quality high-resolution MR imaging in terms of SNR and local image detail.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -626,14 +660,10 @@
   
     <!-- Links/Buttons -->
     <div class="links">
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a href="https://www.sciencedirect.com/science/article/pii/S105381192100687X" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
     </div>
 
-    <!-- Hidden abstract block -->
-    <div class="abstract hidden">
-      <p>In magnetic resonance imaging (MRI) studies of fetal brain development, structural brain atlases usually serve as essential references for the fetal population. Individual images are usually normalized into a common or standard space for analysis. However, the existing fetal brain atlases are mostly based on MR images obtained from Caucasian populations and thus are not ideal for the characterization of the fetal Chinese population due to neuroanatomical differences related to genetic factors. In this paper, we use an unbiased template construction algorithm to create a set of age-specific Chinese fetal atlases between 21-35 weeks of gestation from 115 normal fetal brains. Based on the 4D spatiotemporal atlas, the morphological development patterns, e.g., cortical thickness, cortical surface area, sulcal and gyral patterns, were quantified. The fetal brain abnormalities were detected when referencing the age-specific template. Additionally, a direct comparison of the Chinese fetal atlases and Caucasian fetal atlases reveals dramatic anatomical differences, mainly in the medial frontal and temporal regions. After applying the Chinese and Caucasian fetal atlases separately to an independent Chinese fetal brain dataset, we find that the Chinese fetal atlases result in significantly higher accuracy than the Caucasian fetal atlases in guiding brain tissue segmentation. These results suggest that the Chinese fetal brain atlases are necessary for quantitative analysis of the typical and atypical development of the Chinese fetal population in the future. The atlases with their parcellations are now publicly available at https://github.com/DeepBMI/FBA-Chinese.</p>
-    </div>
+    
   </div>
 </div>
 </li>
@@ -651,7 +681,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023 Qing  Wu. Last updated: April 17, 2023.
+        © Copyright 2023 Qing  Wu. Last updated: June 19, 2023.
       </div>
     </footer>
 
