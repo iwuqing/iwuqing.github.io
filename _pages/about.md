@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: Home
 permalink: /
 subtitle:
 # subtitle: <a href='#'>Affiliations</a>. CMU, Computer Science Department, Pittsburgh.
