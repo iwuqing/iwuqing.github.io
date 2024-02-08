@@ -27,6 +27,3 @@ I am interested in a variety of topics related to <strong>inverse problems</stro
 * Neural Representation<br>
 * CT Material Decomposition<br>
 * Undersampling CT Reconstruction<br>
-
-
-See more in the [detailed CV](https://iwuqing.github.io/assets/pdf/my_cv_en.pdf).
