@@ -1,0 +1,14 @@
+{
+  "_comment": "Order of publications shown on the page (top → bottom). To add a new paper: create content/publications/<slug>.md and add its file name here. To hide a paper without deleting it, set selected: false in its md frontmatter — it will be skipped automatically.",
+  "publications": [
+    "2026-riner.md",
+    "2025-moner.md",
+    "2023-polyner.md",
+    "2023-scope.md",
+    "2023-hbm.md",
+    "2023-arssr.md",
+    "2023-tcas.md",
+    "2023-isbi.md",
+    "2021-irem.md"
+  ]
+}

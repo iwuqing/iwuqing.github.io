@@ -1,0 +1,16 @@
+{
+  "name": "qing-wu-homepage",
+  "version": "1.0.0",
+  "description": "Personal academic homepage of Qing Wu — static, content-driven from markdown.",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node scripts/dev.js",
+    "serve": "node build.js && node scripts/serve.js",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true});console.log('cleaned dist/')\""
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "marked": "^12.0.0"
+  }
+}
