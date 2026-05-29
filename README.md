@@ -4,9 +4,86 @@ A lightweight academic homepage. Content is authored in **markdown** under `cont
 
 ---
 
-## TL;DR — daily workflow (after first-time setup is done)
+## ⭐ 每次更新主页的标准流程（最常看的部分）
 
-> 这是每次想更新主页的标准操作流程。
+每次想加新闻 / 加论文 / 改 bio / 换头像，就按下面这 5 步走，**全程约 3 分钟**。
+
+```bash
+# ────────────────────────────────────────────────
+# Step 1. 切到项目目录
+# ────────────────────────────────────────────────
+cd "C:/Users/admin/Desktop/qing-wu-homepage"
+
+# ────────────────────────────────────────────────
+# Step 2. 改内容（只动 content/ 下的 md 文件）
+# ────────────────────────────────────────────────
+# 常见改动看下面 "Cheatsheet" 章节，几个例子：
+#   - 加新闻       → content/news.md 最上面加 ## 2026-08-15 ...
+#   - 加论文       → 在 content/publications/ 新建 <year>-<slug>.md，
+#                    然后加到 content/publications/_list.json 数组
+#   - 显示/隐藏论文 → 改对应 md 里 selected: true / false
+#   - 改 bio       → content/about.md
+#   - 加友链       → content/friends.md
+
+# ────────────────────────────────────────────────
+# Step 3. 本地预览（强烈推荐）
+# ────────────────────────────────────────────────
+npm run dev
+# → 自动打开 http://localhost:8000 ，边改边自动刷新
+# → 满意了按 Ctrl+C 关掉
+# 如果端口被占用：PORT=8001 npm run dev
+
+# ────────────────────────────────────────────────
+# Step 4. 检查改动 + 提交
+# ────────────────────────────────────────────────
+git status              # 看哪些文件改了，确认没意外的东西
+git add .
+git commit -m "update: <一句话说改了啥>"
+# 例如：
+#   git commit -m "news: ICML 2026 papers accepted"
+#   git commit -m "add publication: PnP-ADMM"
+#   git commit -m "update bio: new affiliation"
+
+# ────────────────────────────────────────────────
+# Step 5. 推到 GitHub
+# ────────────────────────────────────────────────
+git push
+```
+
+**push 完之后等什么？**
+
+1. 打开你的仓库 → 顶部 **Actions** 标签
+2. 会看到两个 workflow 自动跑：
+   - `Build & Deploy to GitHub Pages` — 我们写的 workflow，跑 `npm ci && npm run build` 把 `dist/` 打包上传
+   - `pages build and deployment` — GitHub Pages 官方的发布阶段，把产物推到 CDN
+3. 两个都变 ✅ 绿勾后（约 1 分钟），打开 https://iwuqing.github.io/
+4. **必须强刷一次**清缓存，否则你看到的还是旧版：
+   - Windows: `Ctrl + F5` 或 `Ctrl + Shift + R`
+   - Mac: `Cmd + Shift + R`
+
+就这样。
+
+### ⚠️ 永远不要做的事
+
+- ❌ 不要直接改 `dist/` 里的文件 —— 下次构建会被覆盖
+- ❌ 不要 `git add dist/` 或 `git add node_modules/` —— `.gitignore` 已经忽略它们了，但人工 `git add <path>` 能绕过 `.gitignore`
+- ❌ 不要在 GitHub Settings → Pages 里把 Source 改成 "Deploy from a branch"，必须保持 **GitHub Actions**，否则它会把根目录的 README.md 当主页发布出去
+
+### 出了问题怎么办（5 个最常见的坑）
+
+| 现象 | 原因 / 处理 |
+|---|---|
+| `git push` 报 Permission denied，反复要密码 | Personal Access Token 失效。重新生成 PAT，或装 GitHub CLI 一次 `gh auth login` 永久解决 |
+| Actions 标签里红叉 | 点进去看日志。最常见是 YAML 写错（看 build.js 报的 message） |
+| Push 完去看仍然是旧版 | 浏览器/CDN 缓存。强刷 Ctrl+F5。还不行就在隐身窗口打开 |
+| 打开网站显示的是 README 内容，不是主页 | Settings → Pages → Source 没设成 "GitHub Actions"。改回去并手动 Run workflow |
+| 改了图片但页面还是旧的 | 文件名相同时浏览器会缓存。换个文件名或强刷 |
+
+---
+
+## TL;DR — daily workflow
+
+> 短版速查。详细解释看上面 "每次更新主页的标准流程"。
 
 ```bash
 # 1. 改内容（只动 content/ 下的 md 文件）
@@ -22,8 +99,9 @@ git add .
 git commit -m "update: <写你改了啥>"
 git push
 
-# 4. 等大约 1 分钟，去 https://<your-username>.github.io 看新版
+# 4. 等大约 1 分钟，去 https://iwuqing.github.io 看新版
 #    构建日志可以在仓库 Actions 标签页里看
+#    第一次刷新页面时按 Ctrl+F5 强刷清缓存
 ```
 
 **就这四步**。`dist/` 是 `.gitignore` 忽略掉的产物 —— 你不用提交它，GitHub Actions 会在云端自己跑 `npm run build` 重新生成。

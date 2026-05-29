@@ -12,7 +12,7 @@ topics:
 social:
   - { icon: "fas fa-graduation-cap", url: "https://scholar.google.com/citations?user=A1E80HUAAAAJ", title: "Google Scholar" }
   - { icon: "fab fa-github",         url: "https://github.com/iwuqing",                             title: "GitHub" }
-  - { icon: "fas fa-envelope",       url: "mailto:wuqing@shanghaiteh.edu.cn",                       title: "Email" }
+  - { icon: "fas fa-envelope",       url: "mailto:wuqing2025@gmail.com",                       title: "Email" }
   - { icon: "fab fa-weixin",         popup: "assets/img/wechat-qr.png",                              title: "WeChat" }
 ---
 
