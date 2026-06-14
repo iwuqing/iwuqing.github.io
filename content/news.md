@@ -6,6 +6,9 @@ The build sorts items by date, newest first.
 ## 2026-05-01
 Three papers on inverse problem solving were accepted by **ICML 2026** 🎉 — [PnP-ADMM + Diffusion](https://arxiv.org/abs/2602.23214), [CaMB-Diff](https://arxiv.org/pdf/2603.01890), and IPOD.
 
+## 2026-02-26
+I joined [Ant Group](https://www.antgroup.com/en)'s Medical AI Lab, led by [Dr. Le Lu](https://www.cs.jhu.edu/~lelu/) as a Senior Algorithm Engineer ([Ant Star, Plan A Talent Program](https://talent.antgroup.com/ant-star)) 🎇
+
 ## 2026-01-27
 One paper about [solving 3D medical inverse problems via 2D diffusion models](https://openreview.net/forum?id=R5ETdN6ifA) was accepted by **ICLR 2026** 🎉
 
