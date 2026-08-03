@@ -3,8 +3,11 @@
 Each item starts with `## <ISO date>` followed by the body (markdown).
 The build sorts items by date, newest first.
 
+## 2026-08-01
+One paper about [CT metal artifact reduction](https://arxiv.org/abs/2405.07047) was accepted by **IEEE Transactions on Radiation and Plasma Medical Sciences** 🎉
+
 ## 2026-05-01
-Three papers on inverse problem solving were accepted by **ICML 2026** 🎉 — [PnP-ADMM + Diffusion](https://arxiv.org/abs/2602.23214), [CaMB-Diff](https://arxiv.org/pdf/2603.01890), and IPOD.
+Three papers on inverse problem solving were accepted by **ICML 2026** 🎉 — [PnP-ADMM + Diffusion](https://openreview.net/forum?id=jEBkuuETjr), [CaMB-Diff](https://openreview.net/forum?id=LTp4Q9aNJP), and [IPOD](https://openreview.net/forum?id=jPVGiAUlNa).
 
 ## 2026-02-26
 I joined [Ant Group](https://www.antgroup.com/en)'s Medical AI Lab, led by [Dr. Le Lu](https://www.cs.jhu.edu/~lelu/) as a Senior Algorithm Engineer ([Ant Star, Plan A Talent Program](https://talent.antgroup.com/ant-star)) 🎇
@@ -19,7 +22,7 @@ I have successfully defended my Ph.D. in Electrical Engineering 🎓
 Two papers were accepted by **AAAI 2026** 🎉
 
 ## 2025-06-12
-Our paper [SCOPE](https://ieeexplore.ieee.org/abstract/document/10143286) was named one of the IEEE SPS top 25 downloaded articles in *IEEE TCI* (Sept. 2023 – Sept. 2024) 💥
+Our paper [SCOPE](https://ieeexplore.ieee.org/abstract/document/10143286) was named one of the IEEE SPS *TOP 25 downloaded articles* in **IEEE TCI** (Sept. 2023 – Sept. 2024) 💥
 
 ## 2025-05-24
 I attended ICLR 2025 in Singapore. It was a great trip! 🌈
@@ -49,7 +52,7 @@ One paper was accepted by **NeurIPS 2023** 🎉
 One paper was accepted by **IEEE TCI** 🎉
 
 ## 2023-03-30
-One paper was accepted by *Human Brain Mapping* 🎉
+One paper was accepted by **Human Brain Mapping** 🎉
 
 ## 2023-01-23
 Three papers were accepted by **IEEE ISBI 2023** 🎉
