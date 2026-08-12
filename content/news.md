@@ -4,7 +4,7 @@ Each item starts with `## <ISO date>` followed by the body (markdown).
 The build sorts items by date, newest first.
 
 ## 2026-08-01
-One paper about [CT metal artifact reduction](https://arxiv.org/abs/2405.07047) was accepted by **IEEE Transactions on Radiation and Plasma Medical Sciences** 🎉
+One paper about [CT metal artifact reduction](https://ieeexplore.ieee.org/document/11643957) was accepted by **IEEE Transactions on Radiation and Plasma Medical Sciences** 🎉
 
 ## 2026-05-01
 Three papers on inverse problem solving were accepted by **ICML 2026** 🎉 — [PnP-ADMM + Diffusion](https://openreview.net/forum?id=jEBkuuETjr), [CaMB-Diff](https://openreview.net/forum?id=LTp4Q9aNJP), and [IPOD](https://openreview.net/forum?id=jPVGiAUlNa).
