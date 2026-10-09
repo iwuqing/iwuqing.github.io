@@ -6,7 +6,8 @@ venue: "AAAI 2026"
 badges:
   - { text: "AAAI 2026" }
 year: 2026
-thumb: assets/img/papers/riner_cover.png
+thumb: assets/img/papers/riner-fig1.png
+thumb_alt: "Riner - Figure 1"
 links:
   - { text: "PDF",  url: "https://arxiv.org/pdf/2412.05853.pdf" }
   - { text: "Code", url: "https://github.com/iwuqing/Riner" }

@@ -41,7 +41,7 @@ function esc(s) {
 function formatDate(iso) {
   if (!iso) return '';
   // Accept Date objects (js-yaml auto-parses ISO dates) or strings
-  const d = iso instanceof Date ? iso : new Date(String(iso) + 'T00:00:00');
+  const d = iso instanceof Date ? iso : new Date(String(iso) + 'T00:00:00Z');
   if (isNaN(d)) return String(iso);
   const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const dd = String(d.getUTCDate()).padStart(2, '0');
@@ -50,7 +50,7 @@ function formatDate(iso) {
 
 function isoKey(iso) {
   if (!iso) return '';
-  const d = iso instanceof Date ? iso : new Date(String(iso) + 'T00:00:00');
+  const d = iso instanceof Date ? iso : new Date(String(iso) + 'T00:00:00Z');
   return isNaN(d) ? String(iso) : d.toISOString().slice(0, 10);
 }
 
@@ -73,26 +73,29 @@ function renderAbout() {
   const socials = (fm.social || []).map(s => {
     // Items with `popup: <image>` open the image in the lightbox instead of navigating.
     if (s.popup) {
-      return `<button type="button" class="social-popup" data-zoom-src="${esc(s.popup)}" data-zoom-alt="${esc(s.title || '')}" data-zoom-kind="qr" title="${esc(s.title || '')}" aria-label="${esc(s.title || '')}"><i class="${esc(s.icon)}"></i></button>`;
+      return `<button type="button" class="social-popup" data-zoom-src="${esc(s.popup)}" data-zoom-alt="${esc(s.title || '')}" data-zoom-kind="qr" title="${esc(s.title || '')}" aria-label="${esc(s.title || '')}"><i class="${esc(s.icon)}" aria-hidden="true"></i></button>`;
     }
-    return `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title || '')}"><i class="${esc(s.icon)}"></i></a>`;
+    return `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title || '')}" aria-label="${esc(s.title || '')}"><i class="${esc(s.icon)}" aria-hidden="true"></i></a>`;
   }).join('');
 
   const [emailUser, emailDomain] = (fm.email || '').split('@');
 
-  return `
-      <div class="hero-text">
-        <h1>${esc(fm.name || '')} ${fm.name_cn ? `<span class="cn">${esc(fm.name_cn)}</span>` : ''}</h1>
-        <p class="tagline">${mdInline(fm.tagline || '')}</p>
-        ${md(body)}
-        ${topics ? `<ul class="topic-list">${topics}</ul>` : ''}
-      </div>
-      <aside class="hero-photo">
+  const [role, ...affiliation] = String(fm.tagline || '').split(/\s*·\s*/);
+  return {
+    profile: `
+      <aside class="profile" aria-label="Personal profile">
         <img src="${esc(fm.photo)}" alt="Photo of ${esc(fm.name)}" />
-        ${fm.email ? `<p class="photo-caption">${esc(emailUser)}<span class="at">[at]</span>${esc(emailDomain)}</p>` : ''}
+        <div class="profile-identity">
+          <h1>${esc(fm.name || '')}${fm.name_cn ? `<span class="cn">${esc(fm.name_cn)}</span>` : ''}</h1>
+          <p class="profile-role">${mdInline(role)}</p>
+          ${affiliation.length ? `<p class="profile-affiliation">${mdInline(affiliation.join(' · '))}</p>` : ''}
+        </div>
         ${socials ? `<div class="social-row">${socials}</div>` : ''}
-      </aside>
-  `.trim();
+        ${fm.email ? `<p class="photo-caption">${esc(emailUser)}<span class="at">[at]</span>${esc(emailDomain)}</p>` : ''}
+        <a class="profile-cv" href="assets/pdf/WQ_CV.pdf" target="_blank" rel="noopener"><i class="far fa-file-alt" aria-hidden="true"></i> Curriculum vitae</a>
+      </aside>`.trim(),
+    about: `${md(body)}${topics ? `<ul class="topic-list">${topics}</ul>` : ''}`,
+  };
 }
 
 function renderNews() {
@@ -108,11 +111,17 @@ function renderNews() {
   });
   items.sort((a, b) => (isoKey(a.date) < isoKey(b.date) ? 1 : -1));
 
-  return items.map(d => `
+  const rows = items.map(d => `
         <li>
           <span class="news-date">${esc(formatDate(d.date))}</span>
           <span class="news-body">${mdInline(d.body)}</span>
-        </li>`).join('').trim();
+        </li>`);
+  const latestCount = 6;
+  return `<ul class="news-list">${rows.slice(0, latestCount).join('')}</ul>${rows.length > latestCount ? `
+    <details class="news-archive">
+      <summary>Earlier news <span>(${rows.length - latestCount})</span></summary>
+      <ul class="news-list">${rows.slice(latestCount).join('')}</ul>
+    </details>` : ''}`;
 }
 
 function renderFriends() {
@@ -137,21 +146,22 @@ function renderPublications() {
   }
 
   return visible.map(p => {
+    const figureLabel = p.thumb_alt || p.title || '';
     const badges = (p.badges || []).map(b =>
       `<span class="badge${b.accent ? ' badge-accent' : ''}">${esc(b.text)}</span>`
     ).join('');
     const links = (p.links || []).map(l =>
-      `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.text)}</a>`
-    ).join(' · ');
+      `<a href="${esc(l.url)}" class="paper-link paper-link-${/code/i.test(l.text) ? 'code' : 'paper'}" target="_blank" rel="noopener"><i class="${/code/i.test(l.text) ? 'fas fa-code' : 'far fa-file-alt'}" aria-hidden="true"></i>${esc(l.text)}</a>`
+    ).join('');
     return `
       <article class="pub">
         ${p.thumb
-          ? `<button class="pub-thumb" type="button" data-zoom-src="${esc(p.thumb)}" data-zoom-alt="${esc(p.title || '')}" aria-label="Enlarge thumbnail"><img src="${esc(p.thumb)}" alt="" loading="lazy"/></button>`
+          ? `<button class="pub-thumb" type="button" data-zoom-src="${esc(p.thumb)}" data-zoom-alt="${esc(figureLabel)}" aria-label="Enlarge thumbnail: ${esc(figureLabel)}"><img src="${esc(p.thumb)}" alt="" loading="lazy"/></button>`
           : `<div class="pub-thumb"></div>`}
         <div class="pub-body">
-          ${badges ? `<div class="pub-venue">${badges}</div>` : ''}
           <h3 class="pub-title">${esc(p.title || '')}</h3>
           <p class="pub-authors">${mdInline(p.authors || '')}</p>
+          ${badges ? `<div class="pub-venue">${badges}</div>` : ''}
           ${links ? `<p class="pub-links">${links}</p>` : ''}
         </div>
       </article>`;
@@ -174,21 +184,30 @@ function build() {
 
   const tmpl = read(path.join(ROOT, 'src/index.template.html'));
   const friends = renderFriends();
+  const about = renderAbout();
 
   const rendered = tmpl
     .replace('{{title}}',        esc(meta.title))
     .replace('{{description}}',  esc(meta.description))
     .replace('{{author}}',       esc(meta.author))
-    .replace('{{about}}',        renderAbout())
+    .replace('{{profile}}',      about.profile)
+    .replace('{{about}}',        about.about)
     .replace('{{news}}',         renderNews())
-    .replace('{{publications}}', renderPublications())
-    .replace('{{friends_sub}}',  esc(friends.sub))
-    .replace('{{friends}}',      friends.list);
+    .replace('{{publications}}', renderPublications());
+
+  const renderedFriends = read(path.join(ROOT, 'src/friends.template.html'))
+    .replace('{{title}}', esc(`Friends | ${meta.author}`))
+    .replace('{{description}}', esc(friends.sub))
+    .replace('{{author}}', esc(meta.author))
+    .replace('{{friends_sub}}', esc(friends.sub))
+    .replace('{{friends}}', friends.list);
 
   // Reset & populate dist/
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.mkdirSync(DIST, { recursive: true });
   fs.writeFileSync(path.join(DIST, 'index.html'), rendered);
+  fs.mkdirSync(path.join(DIST, 'friends'), { recursive: true });
+  fs.writeFileSync(path.join(DIST, 'friends/index.html'), renderedFriends);
   copyDir(path.join(ROOT, 'assets'), path.join(DIST, 'assets'));
   // GitHub Pages: this file disables Jekyll processing on the deployed site.
   fs.writeFileSync(path.join(DIST, '.nojekyll'), '');

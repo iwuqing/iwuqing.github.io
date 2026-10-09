@@ -6,7 +6,8 @@ venue: "NeurIPS 2023"
 badges:
   - { text: "NeurIPS 2023" }
 year: 2023
-thumb: assets/img/papers/polyner.png
+thumb: assets/img/papers/polyner-fig3.png
+thumb_alt: "Polyner - Figure 3"
 links:
   - { text: "PDF",  url: "https://openreview.net/pdf?id=xx3QgKyghS" }
   - { text: "Code", url: "https://github.com/iwuqing/Polyner" }

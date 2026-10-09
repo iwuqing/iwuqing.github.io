@@ -5,9 +5,10 @@ authors: '**Qing Wu**\*, Chenhe Du\*, Xuanyu Tian, Jingyi Yu, Yuyao Zhang, Hongj
 venue: "ICLR 2025"
 badges:
   - { text: "ICLR 2025" }
-  - { text: "Spotlight", accent: true }
+  - { text: "Spotlight Paper, Top 5%", accent: true }
 year: 2025
-thumb: assets/img/papers/moner_cover.jpg
+thumb: assets/img/papers/moner-fig12.png
+thumb_alt: "Moner - Figure 12"
 links:
   - { text: "PDF",  url: "https://openreview.net/pdf?id=OdnqG1fYpo" }
   - { text: "Code", url: "https://github.com/iwuqing/Moner" }

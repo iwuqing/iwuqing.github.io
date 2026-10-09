@@ -1,0 +1,30 @@
+{
+  "riner-fig1.png": {
+    "figure": "Figure 1",
+    "pdfPage": 1,
+    "source": "https://arxiv.org/pdf/2412.05853",
+    "cropPoints": [343, 215, 532, 298],
+    "dpi": 300
+  },
+  "moner-fig12.png": {
+    "figure": "Figure 12",
+    "pdfPage": 16,
+    "source": "https://arxiv.org/pdf/2409.16921",
+    "cropPoints": [108, 79, 505, 283],
+    "dpi": 300
+  },
+  "polyner-fig3.png": {
+    "figure": "Figure 3",
+    "pdfPage": 8,
+    "source": "https://proceedings.neurips.cc/paper_files/paper/2023/file/dbf02b21d77409a2db30e56866a8ab3a-Paper-Conference.pdf",
+    "cropPoints": [108, 70, 504, 233],
+    "dpi": 300
+  },
+  "scope-fig6.png": {
+    "figure": "Figure 6",
+    "pdfPage": 6,
+    "source": "https://arxiv.org/pdf/2209.05483",
+    "cropPoints": [312, 55, 560, 154],
+    "dpi": 300
+  }
+}
