@@ -3,6 +3,9 @@
 Each item starts with `## <ISO date>` followed by the body (markdown).
 The build sorts items by date, newest first.
 
+## 2026-09-29
+One paper on [unsupervised high-resolution 3D MRI motion correction](https://www.sciencedirect.com/science/article/pii/S1361841526004044) was accepted by **Medical Image Analysis** 🎉
+
 ## 2026-08-01
 One paper about [CT metal artifact reduction](https://ieeexplore.ieee.org/document/11643957) was accepted by **IEEE Transactions on Radiation and Plasma Medical Sciences** 🎉
 

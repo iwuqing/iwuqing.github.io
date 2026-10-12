@@ -96,8 +96,8 @@ strong { color: var(--text); font-weight: 600; }
 }
 .profile { position: sticky; top: 112px; text-align: center; }
 .profile > img {
-  display: block; width: 256px; height: 256px; margin: 0 auto 24px;
-  object-fit: cover; object-position: 95% center; border-radius: 16px; box-shadow: var(--shadow);
+  display: block; width: 256px; max-width: 100%; height: auto; margin: 0 auto 24px;
+  border-radius: 16px; box-shadow: var(--shadow);
 }
 .profile h1 {
   margin: 0 0 10px; color: var(--text); font-family: var(--font-heading);
@@ -206,7 +206,7 @@ strong { color: var(--text); font-weight: 600; }
   .nav-brand { font-size: 22px; }
   .page-layout { grid-template-columns: 1fr; max-width: 760px; gap: 40px; padding: 32px 24px 48px; }
   .profile { position: static; }
-  .profile > img { width: 224px; height: 224px; }
+  .profile > img { width: 224px; }
   .profile-affiliation { margin-bottom: 12px; }
   .social-row { margin-bottom: 8px; }
   .photo-caption { margin-bottom: 8px; }
@@ -220,7 +220,7 @@ strong { color: var(--text); font-weight: 600; }
   .nav-links.is-open { display: flex; }
   .nav-links a { padding: 8px 10px; }
   .page-layout { padding: 28px 20px 40px; gap: 32px; }
-  .profile > img { width: 200px; height: 200px; margin-bottom: 20px; }
+  .profile > img { width: 200px; margin-bottom: 20px; }
   .profile h1 { font-size: 28px; }
   .profile-role { font-size: 16px; }
   .friends-content { padding: 28px 20px 56px; }
